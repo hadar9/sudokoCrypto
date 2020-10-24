@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+.landing {
+  background-image: url('./img/vote.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.verify {
+  background-image: url('./img/wood.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.text {
+  text-align: center;
+  text-shadow: 2px 2px;
+  font-size: xx-large;
+  color: rgb(39, 16, 241);
+}
+img {
+  width: auto;
+  height: 400px;
+}
+.questiontext {
+  font-size: larger;
+  font-style: oblique;
+  color: blue;
+}
+.votetrue {
+  background-image: url('./img/flag.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.votetext {
+  font-size: xx-large;
+  font-style: oblique;
+  color: rgb(50, 13, 214);
+}
