@@ -4,7 +4,7 @@ const fs = require('fs');
 module.exports={
 init : async function (){
     let board= [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]];
-    let lastindexAndHowAns={"lastindex":[0,0],"howmanyanswers":0,"board":board};
+    let lastindexAndHowAns={"lastindex":[0,0],"howmanyanswers":1,"board":board};
     await fs.writeFileSync(`${__dirname}/data.json`,JSON.stringify(lastindexAndHowAns));
 },
 

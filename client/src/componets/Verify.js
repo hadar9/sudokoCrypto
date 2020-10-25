@@ -10,7 +10,8 @@ function Verify() {
 
   const [formdata,setdata]=useState({
     number:"",
-    question:'what number in row :0 , colum: 0 ?'
+    question:'what number in row :0 , colum: 0 ?',
+    valuerror:""
   });
   
   const {number,question}=formdata;
@@ -26,7 +27,7 @@ function Verify() {
     const number = formdata.number;
     if(number<0 ||number>9)
     {
-    console.log("you need to enter a number between 1-9");
+      setdata({...formdata,number:number,valuerror:"you need to enter a number between 1-9"});
     }
     else{
       const config = {
@@ -37,7 +38,7 @@ function Verify() {
       const body = JSON.stringify({"number":number});
       try{
       let res = await axios.post('/verify',body,config);
-      setdata({...formdata,question:res.data,number:""});
+      setdata({...formdata,question:res.data,number:"",valuerror:""});
       
       }
       catch(e){
@@ -64,7 +65,7 @@ function Verify() {
               <div className="questiontext">
               <p>{formdata.question}</p>
               </div>
-          <div className="col-md-4 offset-md-4"> 
+          <div className="col-md-5 offset-md-4"> 
         <Form inline>
         <Form.Label className="mb-2 mr-sm-2" htmlFor="inlineFormInputName2">
           Answer:
@@ -79,8 +80,11 @@ function Verify() {
         <Button type="submit" className="mb-2" onClick={e=>onsubmit(e)}>
           Sumbit
         </Button>
-      </Form>
+        </Form>
       </div>
+        <div className="valuerror">
+        <p>{formdata.valuerror}</p>
+        </div>
       </div>)
   }
 }

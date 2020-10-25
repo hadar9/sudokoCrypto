@@ -50,3 +50,8 @@ img {
   font-style: oblique;
   color: rgba(233, 7, 7, 0.801);
 }
+.valuerror {
+  font-size: larger;
+  font-style: oblique;
+  color: rgba(255, 0, 0, 0.911);
+}

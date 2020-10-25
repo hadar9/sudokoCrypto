@@ -23,7 +23,7 @@ app.post('/verify', async (req, res) =>{
        return res.status(200).send('Fail');
     }
     else{
-    
+    console.log(howmanyanswers);
     //return new question
     if(howmanyanswers>3){
         init();
@@ -44,7 +44,6 @@ app.post('/verify', async (req, res) =>{
     }
 }
 );
-
 const port = process.env.Port || 5000;
 
 app.listen(port,(req,res) => {
