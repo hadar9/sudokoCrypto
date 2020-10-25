@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/hadar9/sudokoCrypto-#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",

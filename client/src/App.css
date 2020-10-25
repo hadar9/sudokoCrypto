@@ -40,3 +40,13 @@ img {
   font-style: oblique;
   color: rgb(50, 13, 214);
 }
+.fail {
+  background-image: url('./img/noenter.jpg');
+  background-size: 30% 50%;
+  background-repeat: repeat;
+  height: 100vh;
+  text-align: center;
+  font-size: xx-large;
+  font-style: oblique;
+  color: rgba(233, 7, 7, 0.801);
+}

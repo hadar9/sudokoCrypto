@@ -19,7 +19,8 @@ app.post('/verify', async (req, res) =>{
     //check if there is a problem with the answer
     if(checkrow(board,lastrow,answer)===-1 || checkcol(board,lastcol,answer)===-1)
     {
-       return res.status(400).send('Fail');
+        init();
+       return res.status(200).send('Fail');
     }
     else{
     

@@ -47,10 +47,15 @@ function Verify() {
     }
   }
   useEffect(()=>{console.log(formdata)},[formdata]);
-  return (
-    <div className="ver">
-       
-        {formdata.question==='Sucsses' ? <Vote/> :
+  
+  if(formdata.question==='Sucsses'){
+    return (<Vote/>)
+  }
+    else if(formdata.question==='Fail'){
+      return ( <div className="fail"> <h1>Fail</h1></div>)
+    }
+    else{
+      return (
         <div className="verify">
               <div className="text">
               {nl2br(text)}
@@ -76,11 +81,8 @@ function Verify() {
         </Button>
       </Form>
       </div>
-      </div>
+      </div>)
   }
-
-  </div>
-  );
 }
 
 export default Verify;
