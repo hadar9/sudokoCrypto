@@ -24,7 +24,7 @@ app.post('/verify', async (req, res) =>{
         return res.status(200).json(tosend);
     }
     else{
-    console.log(howmanyanswers);
+  
     //return new question
     if(howmanyanswers>3){
         init();

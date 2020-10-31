@@ -11,7 +11,6 @@ function Verify() {
     number:"",
     question:'what number in row :0 , colum: 0 ?',
     valuerror:"",
-    i:[0,1,2,3,4,5,6,7,8],
     clientboard:[[2,9,6,3,1,8,5,7,4],[5,8,4,9,7,2,6,1,3],[7,1,3,6,4,5,2,8,9],[6,2,5,8,9,7,3,4,1],[9,3,1,4,2,6,8,5,7],[4,7,8,5,3,1,9,2,6],[1,6,7,2,5,3,4,9,8],[8,5,9,7,6,4,1,3,2],[3,4,2,1,8,9,7,6,5]],
     serverboard:[[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]]
   });
@@ -27,7 +26,7 @@ function Verify() {
   const onsubmit= async e =>{
     e.preventDefault();
     const number = formdata.number;
-    if(number<0 ||number>9)
+    if(number<1 ||number>9)
     {
       setdata({...formdata,number:number,valuerror:"you need to enter a number between 1-9"});
     }
