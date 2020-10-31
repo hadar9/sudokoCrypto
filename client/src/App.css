@@ -20,14 +20,30 @@
   font-size: xx-large;
   color: rgb(39, 16, 241);
 }
-img {
-  width: auto;
-  height: 400px;
+#verifyanswer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -100px;
+  font-style: bold;
+  font-size: large;
+  color: rgb(6, 139, 35);
 }
 .questiontext {
   font-size: larger;
   font-style: oblique;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -70px;
   color: blue;
+}
+img {
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
 }
 .votetrue {
   background-image: url('./img/flag.jpg');
@@ -53,5 +69,49 @@ img {
 .valuerror {
   font-size: larger;
   font-style: oblique;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 50px;
+  margin-left: -100px;
   color: rgba(255, 0, 0, 0.911);
+}
+.clientboard {
+  float: left;
+  height: 80vh;
+  width: 80vh;
+}
+.serverboard {
+  float: right;
+  height: 80vh;
+  width: 80vh;
+}
+
+td {
+  border: 1px solid #000000;
+  text-align: center;
+  vertical-align: middle;
+  background-color: white;
+}
+
+#th3,
+#th6 {
+  border-left: 4px solid black;
+}
+#row-0,
+#row-3,
+#row-6 {
+  border-top: 4px solid #000000;
+}
+#row-8 {
+  border-bottom: 4px solid #000000;
+}
+
+#col-0,
+#col-3,
+#col-6 {
+  border-left: 4px solid black;
+}
+#col-8 {
+  border-right: 4px solid black;
 }

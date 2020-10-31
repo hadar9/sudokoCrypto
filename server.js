@@ -20,14 +20,16 @@ app.post('/verify', async (req, res) =>{
     if(checkrow(board,lastrow,answer)===-1 || checkcol(board,lastcol,answer)===-1)
     {
         init();
-       return res.status(200).send('Fail');
+        let tosend={msg:'Fail',board:board}
+        return res.status(200).json(tosend);
     }
     else{
     console.log(howmanyanswers);
     //return new question
     if(howmanyanswers>3){
         init();
-       return  res.status(200).send('Sucsses');
+        let tosend={msg:'Sucsses',board:board}
+        return res.status(200).json(tosend);
     }
     else{
     //coosing a new index to ask about it
@@ -39,7 +41,8 @@ app.post('/verify', async (req, res) =>{
     
     //sending the question about the index
     let[row,col]=indexs;
-    return res.status(200).send(`what number in row :${row} and colum:${col}?`);
+    let tosend={msg:`what number in row :${row} and colum:${col}?`,board:board}
+    return res.status(200).json(tosend);
 }
     }
 }

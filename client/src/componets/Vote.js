@@ -26,7 +26,7 @@ function Vote() {
         </div>
         </div> :
 <div className="votefalse">
-<Form>
+<Form id="voteimages">
   <Form.Row>
   <Form.Group id="formGridCheckbox">
     <img src={img1}></img>
