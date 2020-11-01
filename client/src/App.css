@@ -2,13 +2,13 @@
   text-align: center;
 }
 .landing {
-  background-image: url("./img/vote.jpg");
+  background-image: url('./img/vote.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
 }
 .verify {
-  background-image: url("./img/wood.jpg");
+  background-image: url('./img/wood.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
@@ -48,8 +48,14 @@ img {
   width: 150px;
   height: 150px;
 }
+.votefalse {
+  background-image: url('./img/wood.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 .votetrue {
-  background-image: url("./img/flag.jpg");
+  background-image: url('./img/flag.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
@@ -60,7 +66,7 @@ img {
   color: rgb(50, 13, 214);
 }
 .fail {
-  background-image: url("./img/noenter.jpg");
+  background-image: url('./img/noenter.jpg');
   background-size: 30% 50%;
   background-repeat: repeat;
   height: 100vh;
