@@ -26,7 +26,7 @@ app.post('/verify', async (req, res) =>{
     else{
   
     //return new question
-    if(howmanyanswers>3){
+    if(howmanyanswers>81){
         init();
         let tosend={msg:'Sucsses',board:board}
         return res.status(200).json(tosend);
