@@ -1,5 +1,11 @@
 # sudokoCrypto-
+//Hadar atia-205518392
+//Yvgeni Belnky,319323051
 
+//we took the board from this site:
+//http://pi.math.cornell.edu/~mec/Summer2009/meerkamp/Site/Solving_any_Sudoku_I.html
+
+instructions:
 in the console of vs code write:
 
 1. in the root dir
