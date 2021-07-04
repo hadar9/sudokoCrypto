@@ -1,6 +1,6 @@
 # sudokoCrypto
 this project was created for our advanced cryptography course.
-the subject of the project is zero knowledge proof and we choose to sudoko board in order to implement it.
+the subject of the project is zero knowledge proof and we choose sudoko board in order to implement it.
 
 https://user-images.githubusercontent.com/44959973/124393489-77d4b080-dd03-11eb-84f6-30f1a0e4b466.mp4
 
