@@ -1,7 +1,7 @@
 # sudokoCrypto
 this project was created for our advanced cryptography course.
 the subject of the project is zero knowledge proof and we choose to sudoko board in order to implement it.
-
+https://user-images.githubusercontent.com/44959973/124393489-77d4b080-dd03-11eb-84f6-30f1a0e4b466.mp4
 
 "In cryptography, a zero-knowledge proof or zero-knowledge protocol is a method by which one party (the prover) can prove to another party (the verifier) that they know a value x, without conveying any information apart from the fact that they know the value x. The essence of zero-knowledge proofs is that it is trivial to prove that one possesses knowledge of certain information by simply revealing it; the challenge is to prove such possession without revealing the information itself or any additional information.[1]"-taken from wikipedia.
 
