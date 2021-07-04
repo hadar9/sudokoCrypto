@@ -4,11 +4,11 @@ const fs = require('fs');
 module.exports={
 init : async function (){
     let board= [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]];
-    let lastindexAndHowAns={"lastindex":[0,0],"howmanyanswers":1,"board":board};
-    await fs.writeFileSync(`${__dirname}/data.json`,JSON.stringify(lastindexAndHowAns));
+    let lastIndexAndHowAns={"lastIndex":[0,0],"howManyAnswers":1,"board":board};
+    await fs.writeFileSync(`${__dirname}/data.json`,JSON.stringify(lastIndexAndHowAns));
 },
 
-randindex :function (board){
+randIndex :function (board){
 let row =Math.floor(Math.random() * Math.floor(9));
 let col= Math.floor(Math.random() * Math.floor(9));
 while(board[row][col]!==0){
@@ -18,7 +18,7 @@ while(board[row][col]!==0){
 return [row,col];
 },
 
-checkrow: function(board,row,answer){
+checkRow: function(board,row,answer){
     for(let i=0;i<9;i++)
     {
         if(board[row][i]===answer)
@@ -27,7 +27,7 @@ checkrow: function(board,row,answer){
     return 0;
 },
 
-checkcol :function (board,col,answer){
+checkCol :function (board,col,answer){
     for(let i=0;i<9;i++)
     {
         if(board[i][col]===answer)

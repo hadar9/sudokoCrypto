@@ -2,69 +2,161 @@
   text-align: center;
 }
 .landing {
-  background-image: url('./img/vote.jpg');
-  background-size: 100% 100%;
+  position: relative;
+  background-image: url('./img/elections-israel.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 .verify {
+  position: relative;
   background-image: url('./img/wood.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 110vh;
 }
 
 .text {
-  -webkit-text-stroke: 3px royalblue;
+  -webkit-text-stroke: 2px royalblue;
+  color: blue;
+  text-align: center;
+  text-shadow: 2px 2px;
+  font-size: x-large;
+  line-height: 1.1;
+}
+.questiontext {
+  font-size: large;
+  font-style: oblique;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  left: 38%;
+  color: blue;
+}
+#verifyanswer {
+  position: absolute;
+  top: 48%;
+  left: 40%;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: large;
+  font-weight: bold;
+  color: royalblue;
+}
+.valuerror {
+  font-size: larger;
+  font-style: oblique;
+  font-weight: bold;
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  margin-top: 50px;
+  margin-left: -100px;
+  color: rgba(255, 0, 0, 0.911);
+}
+
+.clientBoard {
+  float: left;
+  width: 80px;
+}
+.serverBoard {
+  float: right;
+  width: 80px;
+}
+
+td {
+  border: 1px solid #000000;
+  text-align: center;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+}
+
+#thcr,
+#th0,
+#th1,
+#th2,
+#th3,
+#th4,
+#th5,
+#th6,
+#th7,
+#th8 {
+  border-top: 4px solid black;
+}
+
+#thcr,
+#th0,
+#th3,
+#th6 {
+  border-left: 4px solid black;
+}
+#th8 {
+  border-right: 4px solid black;
+}
+
+.row-0,
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5,
+.row-6,
+.row-7,
+.row-8 {
+  border-left: 4px solid black;
+}
+
+.row-0,
+.row-3,
+.row-6 {
+  border-top: 4px solid #000000;
+}
+.row-8 {
+  border-bottom: 4px solid #000000;
+}
+
+.col-0,
+.col-3,
+.col-6 {
+  border-left: 4px solid black;
+}
+.col-8 {
+  border-right: 4px solid black;
+}
+
+.votetrue {
+  background-image: url('./img/flag.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  -webkit-text-stroke: 1px royalblue;
   color: blue;
   text-align: center;
   text-shadow: 2px 2px;
   font-size: xx-large;
   line-height: 1.1;
 }
-#verifyanswer {
-  position: fixed;
-  top: 45%;
-  left: 48%;
-  margin-top: -10px;
-  margin-left: -100px;
-  font-style: bold;
-  font-size: large;
-  color: rgb(6, 139, 35);
-}
-.questiontext {
-  -webkit-text-stroke: 1px blue;
-  font-size: larger;
-  font-style: oblique;
-  position: fixed;
-  top: 46%;
-  left: 48%;
-  margin-top: -50px;
-  margin-left: -70px;
-  color: blue;
-}
-img {
-  margin-right: auto;
-  width: 150px;
-  height: 150px;
-}
+
 .votefalse {
   background-image: url('./img/wood.jpg');
   background-size: 100% 100%;
-  background-repeat: no-repeat;
   height: 100vh;
+  font-size: x-large;
+  color: blue;
+  font-weight: bold;
 }
-.votetrue {
-  background-image: url('./img/flag.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 100vh;
+#voteimages {
+  right: 20%;
+  top: 5%;
 }
-.votetext {
-  font-size: xx-large;
-  font-style: oblique;
-  color: rgb(50, 13, 214);
+img {
+  margin-top: 10px;
+  width: 220px;
+  height: 210px;
+  box-shadow: 3px 5px black;
 }
+
 .fail {
   background-image: url('./img/noenter.jpg');
   background-size: 30% 50%;
@@ -74,53 +166,4 @@ img {
   font-size: xx-large;
   font-style: oblique;
   color: rgba(233, 7, 7, 0.801);
-}
-.valuerror {
-  font-size: larger;
-  font-style: oblique;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: 50px;
-  margin-left: -100px;
-  color: rgba(255, 0, 0, 0.911);
-}
-.clientboard {
-  float: left;
-  height: 80vh;
-  width: 80vh;
-}
-.serverboard {
-  float: right;
-  height: 80vh;
-  width: 80vh;
-}
-
-td {
-  border: 1px solid #000000;
-  text-align: center;
-  vertical-align: middle;
-  background-color: white;
-}
-
-#th3,
-#th6 {
-  border-left: 4px solid black;
-}
-#row-0,
-#row-3,
-#row-6 {
-  border-top: 4px solid #000000;
-}
-#row-8 {
-  border-bottom: 4px solid #000000;
-}
-
-#col-0,
-#col-3,
-#col-6 {
-  border-left: 4px solid black;
-}
-#col-8 {
-  border-right: 4px solid black;
 }
