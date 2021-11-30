@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { answer } from '../../actions/index';
+import { useDispatch, useSelector } from 'react-redux';
+import { answerAsync } from '../../reducers/index';
 
-function Question({ answer, state: { question } }) {
+export default function Question() {
   const [comState, setState] = useState({
     number: '',
     valueError: '',
   });
 
   const { number, valueError } = comState;
+  const dispatch = useDispatch();
+  const question = useSelector((state) => state.rootReducer.question);
 
   const onchange = (e) => {
     setState({ ...comState, number: e.target.value });
@@ -25,7 +26,7 @@ function Question({ answer, state: { question } }) {
         valueError: 'enter a number between 1-9',
       });
     } else {
-      answer(number);
+      dispatch(answerAsync(number));
       setState({
         ...comState,
         number: '',
@@ -62,11 +63,3 @@ function Question({ answer, state: { question } }) {
     </>
   );
 }
-
-Question.propTypes = {
-  answer: PropTypes.func.isRequired,
-  state: PropTypes.object.isRequired,
-};
-const mapStateToProps = (state) => ({ state });
-
-export default connect(mapStateToProps, { answer })(Question);

@@ -1,11 +1,14 @@
 import React from 'react';
 import Vote from '../vote/Vote';
 import Question from './Question';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { MyTable } from './MyTable';
 
-function Verify({ state: { clientBoard, serverBoard, question } }) {
+export default function Verify() {
+  const clientBoard = useSelector((state) => state.rootReducer.clientBoard);
+  const serverBoard = useSelector((state) => state.rootReducer.serverBoard);
+  const question = useSelector((state) => state.rootReducer.question);
+
   if (question === 'Sucsses') {
     return <Vote />;
   } else if (question === 'Fail') {
@@ -28,9 +31,3 @@ function Verify({ state: { clientBoard, serverBoard, question } }) {
     );
   }
 }
-Verify.propTypes = {
-  state: PropTypes.object.isRequired,
-};
-const mapStateToProps = (state) => ({ state });
-
-export default connect(mapStateToProps, {})(Verify);
